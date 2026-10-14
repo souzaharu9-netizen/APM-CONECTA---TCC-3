@@ -1,0 +1,43 @@
+.cadastro-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#f3f6fa;
+
+}
+
+.cadastro-card{
+    width:550px;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+.cadastro-card h1{
+    text-align:center;
+    margin-bottom:30px;
+
+}
+
+.cadastro-card form{
+    display:flex;
+    flex-direction:column;
+
+}
+
+.cadastro-card input,
+.cadastro-card select{
+    margin:10px 0;
+    padding:13px;
+    border-radius:8px;
+    border:1px solid #ccc;
+
+}
+
+.cadastro-card button{
+    margin-top:20px;
+
+}
