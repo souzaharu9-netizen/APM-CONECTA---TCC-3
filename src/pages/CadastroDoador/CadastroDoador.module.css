@@ -1,0 +1,692 @@
+
+:global(*) {
+    box-sizing: border-box;
+}
+
+:global(html) {
+    min-height: 100%;
+    background: #f8f2b9;
+}
+
+:global(body) {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #443d13;
+}
+
+:global(button),
+:global(input),
+:global(select) {
+    font: inherit;
+}
+
+:global(button),
+:global(a),
+:global(input),
+:global(select) {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.doadorPagina {
+    --doador-oliva: #7d8618;
+    --doador-oliva-escuro: #747e14;
+    --doador-amarelo: #f8f2b9;
+    --doador-formulario: #fffbed;
+    --doador-laranja: #e96016;
+    --doador-pessego: #fff2df;
+    --doador-borda: #eee3a0;
+    --doador-texto: #453f18;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--doador-amarelo);
+}
+
+.doadorHero h1 {
+    margin: 0 0 7px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(24px, 3vw, 29px);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+/* Cabeçalho */
+
+.doadorNavbar {
+    width: 100%;
+    min-height: 50px;
+    background: var(--doador-oliva-escuro);
+    color: #fff;
+}
+
+.doadorNavInterna {
+    width: min(890px, calc(100% - 40px));
+    min-height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.doadorMarca {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.doadorMarcaIcone {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--doador-laranja);
+    color: #fff;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.doadorVoltarTopo {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.doadorVoltarTopo:hover {
+    opacity: 0.75;
+}
+
+/* Banner de apresentação */
+
+.doadorHero {
+    min-height: 254px;
+    padding: 36px 20px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(110deg, #858d19 0%, #a6ad22 100%);
+}
+
+.doadorHeroIcone {
+    width: 57px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.17);
+    box-shadow: 0 5px 12px rgba(247, 247, 243, 0.12);
+}
+
+.doadorEtiqueta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 21px;
+    padding: 3px 12px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.doadorHero h1 {
+    margin: 0 0 7px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(24px, 3vw, 29px);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.doadorHero p {
+    max-width: 520px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Área principal */
+
+.doadorPrincipal {
+    width: 100%;
+    flex: 1;
+    padding: 35px 20px 48px;
+    background: var(--doador-amarelo);
+}
+
+.doadorFormulario {
+    width: 100%;
+    max-width: 578px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #eee1a1;
+    border-radius: 16px;
+    background: var(--doador-formulario);
+    box-shadow: 0 2px 3px rgba(253, 253, 252, 0.13);
+}
+
+/* Seções do formulário */
+
+.doadorSecao {
+    border-bottom: 1px solid var(--doador-borda);
+}
+
+.doadorSecaoTitulo {
+    min-height: 47px;
+    padding: 12px 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--doador-pessego);
+    border-bottom: 1px solid var(--doador-borda);
+    color: var(--doador-laranja);
+}
+
+.doadorSecaoTitulo svg {
+    flex: 0 0 auto;
+}
+
+.doadorSecaoTitulo h2 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.doadorSecaoConteudo {
+    padding: 22px;
+}
+
+.doadorCampo {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.doadorCampo label,
+.doadorLabelPerfil {
+    color: var(--doador-texto);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.doadorCampo input,
+.doadorCampo select {
+    width: 100%;
+    height: 42px;
+    min-width: 0;
+    padding: 0 14px;
+    outline: none;
+    border: 1px solid #eee3a0;
+    border-radius: 16px;
+    background: #fff;
+    color: #37331c;
+    font-size: 12px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.doadorCampo input::placeholder {
+    color: #a8a49a;
+    opacity: 1;
+}
+
+.doadorCampo input:focus,
+.doadorCampo select:focus {
+    border-color: var(--doador-laranja);
+    box-shadow: 0 0 0 3px rgba(233, 96, 22, 0.09);
+}
+
+.doadorCampo input[type="date"] {
+    color-scheme: light;
+}
+
+.doadorCampo input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+.doadorGrade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.doadorSecaoConteudo > .doadorCampo:first-child {
+    margin-top: 0;
+}
+
+/* Campos de seleção */
+
+.doadorSelectWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.doadorCampo select {
+    padding-right: 35px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.doadorSetaSelect {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5e5a37;
+    pointer-events: none;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Senha e confirmação */
+
+.doadorCampoSenha {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.doadorCampoSenha input {
+    padding-right: 42px;
+}
+
+.doadorBotaoOlho {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 25px;
+    height: 28px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    color: #625e2b;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.doadorBotaoOlho:hover {
+    color: var(--doador-laranja);
+}
+
+.doadorBotaoOlho:focus-visible {
+    outline: 2px solid var(--doador-laranja);
+    outline-offset: 2px;
+    border-radius: 5px;
+}
+
+/* Perfil selecionado */
+
+.doadorCampoPerfil {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 16px;
+}
+
+.doadorPerfilSelecionado {
+    min-height: 43px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid #ffc89f;
+    border-radius: 15px;
+    background: var(--doador-pessego);
+    color: var(--doador-laranja);
+}
+
+.doadorPerfilNome {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+}
+
+.doadorBadgeSelecionado {
+    padding: 3px 9px;
+    border-radius: 15px;
+    background: var(--doador-laranja);
+    color: #fff;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+/* Termos e botões */
+
+.doadorRodapeFormulario {
+    padding: 18px 22px 22px;
+}
+
+.doadorAceite {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: var(--doador-texto);
+    font-size: 10px;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.doadorAceite input {
+    width: 13px;
+    height: 13px;
+    flex: 0 0 13px;
+    margin: 2px 0 0;
+    accent-color: var(--doador-laranja);
+    cursor: pointer;
+}
+
+.doadorAceite a {
+    color: var(--doador-laranja);
+    text-decoration: none;
+}
+
+.doadorAceite a:hover {
+    text-decoration: underline;
+}
+
+.doadorBotoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 11px;
+    margin-top: 17px;
+}
+
+.doadorBotoes button {
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.doadorBotoes button:active {
+    transform: scale(0.98);
+}
+
+.doadorBotaoVoltar {
+    border-color: #eee3a0 !important;
+    background: transparent;
+    color: var(--doador-texto);
+}
+
+.doadorBotaoVoltar:hover {
+    border-color: var(--doador-oliva) !important;
+    background: #fff9d9;
+}
+
+.doadorBotaoCancelar {
+    border-color: var(--doador-laranja) !important;
+    background: transparent;
+    color: var(--doador-laranja);
+}
+
+.doadorBotaoCancelar:hover {
+    background: var(--doador-pessego);
+}
+
+.doadorBotaoCadastrar {
+    border-color: #c9cd91 !important;
+    background: #c9cd91;
+    color: #fff;
+    font-weight: 700 !important;
+}
+
+.doadorBotaoCadastrar:hover {
+    border-color: var(--doador-oliva);
+    background: var(--doador-oliva);
+}
+
+.doadorBotoes button:focus-visible {
+    outline: 2px solid var(--doador-laranja);
+    outline-offset: 3px;
+}
+
+/* Mensagens de validação */
+
+.doadorMensagem {
+    padding: 11px 13px;
+    margin-top: 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.doadorMensagemErro {
+    border-color: #efb7a6;
+    background: #fff0eb;
+    color: #a43b1b;
+}
+
+.doadorMensagemSucesso {
+    border-color: #c9d7a4;
+    background: #f0f5dc;
+    color: #53651a;
+}
+
+/* Rodapé da página */
+
+.doadorFooter {
+    width: 100%;
+    min-height: 62px;
+    padding: 17px 20px;
+    background: var(--doador-oliva-escuro);
+    color: #f8f5dc;
+}
+
+.doadorFooterInterno {
+    width: min(890px, 100%);
+    min-height: 28px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.doadorFooterInterno p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.doadorLinksFooter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+}
+
+.doadorLinksFooter a {
+    color: #f8f5dc;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.doadorLinksFooter a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (min-width: 1400px) {
+    .doadorNavInterna,
+    .doadorFooterInterno {
+        width: min(890px, calc(100% - 48px));
+    }
+}
+
+@media (max-width: 700px) {
+    .doadorNavInterna {
+        width: calc(100% - 30px);
+    }
+
+    .doadorHero {
+        min-height: 235px;
+        padding: 30px 18px;
+    }
+
+    .doadorHero h1 {
+        font-size: 25px;
+    }
+
+    .doadorHero p {
+        max-width: 440px;
+    }
+
+    .doadorQuebraDesktop {
+        display: none;
+    }
+
+    .doadorPrincipal {
+        padding: 25px 15px 35px;
+    }
+
+    .doadorFormulario {
+        max-width: 578px;
+    }
+
+    .doadorFooterInterno {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .doadorLinksFooter {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .doadorNavbar,
+    .doadorNavInterna {
+        min-height: 48px;
+    }
+
+    .doadorMarca {
+        font-size: 12px;
+    }
+
+    .doadorVoltarTopo {
+        font-size: 11px;
+    }
+
+    .doadorHero {
+        min-height: 220px;
+    }
+
+    .doadorHero h1 {
+        font-size: 23px;
+    }
+
+    .doadorHero p {
+        font-size: 11px;
+    }
+
+    .doadorPrincipal {
+        padding: 20px 10px 28px;
+    }
+
+    .doadorFormulario {
+        border-radius: 13px;
+    }
+
+    .doadorSecaoTitulo {
+        padding: 12px 15px;
+    }
+
+    .doadorSecaoConteudo {
+        padding: 17px 15px;
+    }
+
+    .doadorGrade {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .doadorRodapeFormulario {
+        padding: 17px 15px 19px;
+    }
+
+    .doadorBotoes {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .doadorBotoes button {
+        min-height: 43px;
+    }
+
+    .doadorLinksFooter {
+        gap: 12px;
+    }
+
+    .doadorLinksFooter a,
+    .doadorFooterInterno p {
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .doadorPagina *,
+    .doadorPagina *::before,
+    .doadorPagina *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

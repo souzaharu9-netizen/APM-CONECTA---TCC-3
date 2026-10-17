@@ -1,0 +1,38 @@
+[
+    {
+        "Name":  "assets",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "components",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "imagens",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "pages",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "routes",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "App.css",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "App.jsx",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "index.css",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "main.jsx",
+        "PSIsContainer":  false
+    }
+]

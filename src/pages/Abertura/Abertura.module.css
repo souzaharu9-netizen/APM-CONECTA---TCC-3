@@ -217,31 +217,17 @@
 
 }
 
+
 .logoIcon {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 33px;
-
-    height: 33px;
-
+    display: block;
+    width: 38px;
+    height: 38px;
     flex-shrink: 0;
-
-    border-radius: 13px;
-
-    background: var(--laranja);
-
-    color: #fff;
-
-    font-family: Georgia, serif;
-
-    font-size: 13px;
-
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
 }
+
 
 .navButtons {
 
@@ -813,7 +799,7 @@
 
     height: 48px;
 
-    border-radius: 16px;
+    border-radius: 50%;
 
     font-size: 25px;
 
@@ -1005,9 +991,23 @@
 
 .identidadeIcone {
 
-    display: inline-block;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 52px;
+
+    height: 52px;
 
     margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
     font-size: 25px;
 

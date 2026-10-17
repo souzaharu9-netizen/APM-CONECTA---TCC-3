@@ -1,103 +1,577 @@
-.login-container{
-    width:100%;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#eef2f7;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
 
+:global(*) {
+    box-sizing: border-box;
 }
 
-.login-card{
-    width:900px;
-    display:flex;
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 0 20px rgba(0,0,0,.15);
-
+:global(html),
+:global(body),
+:global(#root):has(.login) {
+    min-height: 100%;
+    margin: 0;
 }
 
-.login-esquerda{
-    width:45%;
-    background:#2E7D32;
-    color:white;
-    padding:50px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
+:global(body) {
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "DM Sans", Arial, sans-serif;
 }
 
-.login-esquerda h1{
-    font-size:42px;
-    margin-bottom:20px;
-
+:global(#root) {
+    width: 100%;
+    max-width: none;
+    border: 0;
+    text-align: left;
 }
 
-.login-esquerda p{
-    font-size:18px;
-    line-height:30px;
 
+.login {
+    --verde: #7B8318;
+    --verde-escuro: #626B10;
+    --verde-claro: #F0E9A8;
+    --laranja: #E96B1B;
+    --creme: #FFFDF0;
+    --fundo: #F8F2B9;
+    --texto: #292817;
+    --texto-suave: #716D45;
+    --borda: #EEE4A4;
+
+    /* Mantenha todas as demais propriedades existentes
+       dentro deste bloco, sem alterações. */
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
+    color: var(--texto);
+    background:
+        radial-gradient(ellipse at 50% 18%, rgb(255 255 255 / 72%), transparent 52%),
+        var(--fundo);
+    font-family: "DM Sans", Arial, sans-serif;
 }
 
-.login-direita{
-    width:55%;
-    padding:50px;
-
+.login * {
+    box-sizing: border-box;
 }
 
-.login-direita h2{
-    text-align:center;
-    margin-bottom:30px;
-
+.login a {
+    color: inherit;
+    text-decoration: none;
 }
 
-form{
-    display:flex;
-    flex-direction:column;
-
+.login h1,
+.login p {
+    margin-top: 0;
 }
 
-label{
-    margin-top:15px;
-
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 68px;
+    background: var(--verde);
+    color: #fff;
 }
 
-input{
-    padding:12px;
-    margin-top:8px;
-    border-radius:8px;
-    border:1px solid #ccc;
-
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(1120px, calc(100% - 48px));
+    min-height: inherit;
+    margin: 0 auto;
 }
 
-button{
-    margin-top:30px;
-    padding:14px;
-    border:none;
-    background:#2E7D32;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:17px;
-
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
 }
 
-button:hover{
-    background:#1f5d24;
-
+.logoIcon {
+    display: block;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-.links{
-    margin-top:25px;
-    display:flex;
-    justify-content:space-between;
-
+.linkVoltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 40px;
+    color: #fff8d9;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
 }
 
-.links a{
-    color:#1565C0;
-    text-decoration:none;
+.linkVoltar:hover {
+    opacity: 0.78;
+}
 
+.conteudo {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 56px 24px 64px;
+}
+
+.loginSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%, 440px);
+    min-width: 0;
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.marca {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(104 117 18 / 12%);
+    border-radius: 20px;
+    background: var(--verde);
+    box-shadow: 0 10px 24px rgb(80 93 11 / 18%);
+    color: #fff;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.introducao h1 {
+    margin: 0;
+    color: var(--texto);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(28px, 4vw, 34px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.introducao p {
+    margin: 9px 0 0;
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.55;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 32px;
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    background: var(--creme);
+    box-shadow: 0 18px 50px rgb(54 51 23 / 10%);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+}
+
+.campo + .campo {
+    margin-top: 20px;
+}
+
+.campo > label {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo > input,
+.campoSenha > input {
+    width: 100%;
+    height: 48px;
+    min-width: 0;
+    padding: 0 15px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    outline: none;
+    background: #fff;
+    color: var(--texto);
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo input::placeholder {
+    color: #989889;
+    opacity: 1;
+}
+
+.campo > input:focus,
+.campoSenha > input:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 4px rgb(104 117 18 / 13%);
+}
+
+.campoSenha {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.campoSenha > input {
+    padding-right: 52px;
+}
+
+.mostrarSenha {
+    position: absolute;
+    right: 8px;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--verde-escuro);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.mostrarSenha:hover {
+    background: var(--verde-claro);
+}
+
+.mostrarSenha svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.checkboxLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkboxLabel input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: var(--verde);
+    cursor: pointer;
+}
+
+.linkRecuperar {
+    color: var(--laranja) !important;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    transition: color 0.2s ease;
+}
+
+.linkRecuperar:hover {
+    color: var(--verde-escuro) !important;
+    text-decoration: underline;
+}
+
+.perfilDemo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: 1px solid #e5e8d0;
+    border-radius: 14px;
+    background: #f4f5e9;
+}
+
+.perfilTitulo {
+    color: var(--texto-suave);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.perfilBotoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+}
+
+.perfilBotoes button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 38px;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.perfilAtivo {
+    background: var(--verde);
+    color: #fff;
+    font-weight: 700;
+}
+
+.perfilInativo {
+    border-color: var(--borda);
+    background: #fff;
+    color: var(--texto);
+    font-weight: 500;
+}
+
+.perfilBotoes button:hover {
+    filter: brightness(0.97);
+}
+
+.mensagemErro {
+    margin: 14px 0 0;
+    color: #b42318;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.btnEntrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 20px;
+    padding: 0 18px;
+    border: 1px solid var(--verde);
+    border-radius: 12px;
+    background: var(--verde);
+    color: #fff;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btnEntrar:hover {
+    transform: translateY(-1px);
+    background: var(--verde-escuro);
+}
+
+.btnEntrar:active {
+    transform: translateY(0);
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.linha {
+    flex: 1;
+    height: 1px;
+    background: var(--borda);
+}
+
+.divisorTexto {
+    color: var(--texto-suave);
+    font-size: 13px;
+}
+
+.btnCadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    padding: 0 16px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btnCadastro:hover {
+    border-color: var(--verde);
+    background: var(--verde-claro);
+}
+
+.mensagemSeguranca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 22px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    text-align: center;
+}
+
+.mensagemSeguranca svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.logo:focus-visible,
+.linkVoltar:focus-visible,
+.linkRecuperar:focus-visible,
+.btnCadastro:focus-visible,
+.btnEntrar:focus-visible,
+.mostrarSenha:focus-visible,
+.perfilBotoes button:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .navbar,
+    .navContainer {
+        min-height: 60px;
+    }
+
+    .navContainer {
+        width: calc(100% - 36px);
+        gap: 12px;
+    }
+
+    .logo {
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .logoIcon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .linkVoltar {
+        gap: 5px;
+        font-size: 13px;
+    }
+
+    .conteudo {
+        align-items: flex-start;
+        padding: 40px 18px 44px;
+    }
+
+    .introducao {
+        margin-bottom: 24px;
+    }
+
+    .marca {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 14px;
+    }
+
+    .introducao p {
+        font-size: 14px;
+    }
+
+    .formulario {
+        padding: 24px;
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navContainer {
+        width: calc(100% - 28px);
+    }
+
+    .logo {
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .logoIcon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .linkVoltar {
+        font-size: 12px;
+    }
+
+    .conteudo {
+        padding: 32px 14px 36px;
+    }
+
+    .formulario {
+        padding: 20px 17px;
+    }
+
+    .opcoes {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .login *,
+    .login *::before,
+    .login *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }

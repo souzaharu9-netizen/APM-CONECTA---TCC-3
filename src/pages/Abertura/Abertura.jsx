@@ -1,6 +1,10 @@
-import { memo } from "react";
 
+import { memo } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Abertura.module.css";
+import imagens from "../../imagens/logoapm.png";
+
+
 
 const etapas = [
 
@@ -130,13 +134,16 @@ function Abertura() {
 
                 <div className={styles.navContainer}>
 
+                    
                     <a href="#inicio" className={styles.logo}>
-
-                        <span className={styles.logoIcon}>A</span>
-
-                        <span>APM Conecta</span>
-
+                        <img
+                            src={imagens}
+                            alt="Logo APM Conecta"
+                            className={styles.logoIcon}
+                        />
+                        <span>APM CONECTA</span>
                     </a>
+
 
                     <nav
 
@@ -146,17 +153,17 @@ function Abertura() {
 
                     >
 
-                        <a href="/login" className={styles.btnEntrar}>
+                        <Link to="/login" className={styles.btnEntrar}>
 
                             Entrar
 
-                        </a>
+                        </Link>
 
-                        <a href="/cadastro" className={styles.btnCadastro}>
+                        <Link to="/cadastro" className={styles.btnCadastro}>
 
                             Criar Conta
 
-                        </a>
+                        </Link>
 
                     </nav>
 
@@ -212,17 +219,14 @@ function Abertura() {
 
                                 </a>
 
-                                <a
-
-                                    href="/cadastro"
-
+                                <Link
+                                    to="/cadastro"
                                     className={styles.btnSecundario}
-
                                 >
 
                                     Criar conta grátis
 
-                                </a>
+                                </Link>
 
                             </div>
 
@@ -289,7 +293,7 @@ function Abertura() {
 
                             <img
 
-                                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1100&q=85"
+                                src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=700&h=460&fit=crop&auto=format"
 
                                 alt="Alunos participando de atividades escolares"
 
@@ -491,11 +495,11 @@ function Abertura() {
 
                     </p>
 
-                    <a href="/cadastro" className={styles.btnPrincipal}>
+                    <Link to="/cadastro" className={styles.btnPrincipal}>
 
                         Criar minha conta <span>→</span>
 
-                    </a>
+                    </Link>
 
                 </section>
 
