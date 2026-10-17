@@ -1,0 +1,67 @@
+/* Tela inteira, centralização perfeita */
+.splash-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #e56346, #f1c663);
+
+  /* Evita scroll em mobile */
+  overflow: hidden;
+
+  /* Suporte a notch (iOS) */
+  padding: env(safe-area-inset-top)
+           env(safe-area-inset-right)
+           env(safe-area-inset-bottom)
+           env(safe-area-inset-left);
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #ffffff;
+
+  /* Evita quebra estranha em telas pequenas */
+  max-width: 90%;
+}
+
+/* Tipografia responsiva */
+.splash-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.splash-subtitle {
+  margin-top: 0.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  opacity: 0.9;
+}
+
+/* Spinner responsivo */
+.spinner {
+  margin-top: 1.5rem;
+
+  width: clamp(32px, 6vw, 48px);
+  height: clamp(32px, 6vw, 48px);
+
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+/* Animação */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
