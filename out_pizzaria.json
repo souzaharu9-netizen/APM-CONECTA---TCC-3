@@ -1,0 +1,14 @@
+[
+    {
+        "Name":  "pizzaria",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "pizzaria-web",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "bd_pizzaria.sql",
+        "PSIsContainer":  false
+    }
+]

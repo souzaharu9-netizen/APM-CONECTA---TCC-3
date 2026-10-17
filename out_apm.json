@@ -1,0 +1,54 @@
+[
+    {
+        "Name":  ".git",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "dist",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "node_modules",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "public",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  "src",
+        "PSIsContainer":  true
+    },
+    {
+        "Name":  ".gitignore",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "apmconecta.sql",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "eslint.config.js",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "index.html",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "package-lock.json",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "package.json",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "README.md",
+        "PSIsContainer":  false
+    },
+    {
+        "Name":  "vite.config.js",
+        "PSIsContainer":  false
+    }
+]
